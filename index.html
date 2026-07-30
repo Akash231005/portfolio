@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akash S — Full Stack Software Engineer</title>
+<meta name="description" content="Akash S — Computer Science undergraduate & full-stack engineer specializing in the MERN stack, REST APIs, JWT authentication and automated testing.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Akash S — Full Stack Software Engineer">
+<meta property="og:description" content="Full-stack engineer building tested, production-ready systems with the MERN stack.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2300E5FF%22>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader">
+  <div class="loader-inner">
+    <span class="loader-prompt">akash@ssn:~$</span>
+    <span class="loader-text" id="loaderText"></span><span class="loader-cursor">▍</span>
+  </div>
+</div>
+
+<!-- ============ PROGRESS BAR ============ -->
+<div id="scrollProgress"></div>
+
+<!-- ============ CURSOR DOT (desktop only, css controlled) ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">AS<span class="dot">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certs</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="assets/Akash_S_Resume.pdf" download>
+        <i class="fa-solid fa-arrow-down-long"></i> Resume
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-inner container">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Open to Software Engineering roles &amp; internships
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-line">Hi, I'm <span class="grad-text">Akash S</span></span>
+        <span class="hero-title-line hero-typed-wrap">
+          I build <span id="typedText" class="typed-text"></span><span class="typed-cursor">|</span>
+        </span>
+      </h1>
+
+      <p class="hero-desc">
+        Computer Science undergraduate at <strong>SSN College of Engineering</strong> who ships full-stack
+        products on the MERN stack — then proves they work with an automated test suite before calling
+        it done. REST APIs, JWT auth, and CI pipelines are where I'm most at home.
+      </p>
+
+      <div class="hero-cta">
+        <a href="assets/Akash_S_Resume.pdf" download class="btn btn-primary">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
+        <a href="#projects" class="btn btn-outline">
+          <i class="fa-solid fa-diagram-project"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-solid fa-paper-plane"></i> Hire Me
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <a href="https://github.com/Akash231005" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/akash-s-836200333" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/Akash___S/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+        <a href="mailto:akashs231005@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <button class="scroll-indicator" id="scrollIndicator" aria-label="Scroll down">
+      <span>scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="eyebrow">// about-me.md</p>
+      <h2 class="section-title">The short version</h2>
+
+      <div class="about-grid">
+        <div class="about-visual reveal-up">
+          <div class="about-photo-frame">
+              <img src="assets/DP_Photo.jpeg" alt="Akash S" class="about-photo-img">
+              <div class="about-photo-badge">
+              <i class="fa-solid fa-location-dot"></i> Chennai, India
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="reveal-up">
+            I'm a third-year Computer Science undergraduate at SSN College of Engineering with a strong
+            grounding in DSA, OOP, DBMS, Operating Systems and Computer Networks — and a habit of turning
+            that theory into working software. Most of my time goes into full-stack development on the
+            MERN stack, but what I actually enjoy is the backend half: designing REST APIs, wiring up
+            JWT authentication, and writing automated tests so the API still works the way I promised
+            it would six weeks from now.
+          </p>
+          <p class="reveal-up">
+            That instinct came from a mentor-guided internship at <strong>Jyesta</strong>, where I shipped
+            CRUD APIs and React components inside a real development workflow — Git branches, code review,
+            debugging other people's assumptions, not just my own. I'm currently exploring where that lands
+            best: backend engineering, QA/test engineering, or full-stack roles at product-based companies.
+          </p>
+
+          <div class="about-goals reveal-up">
+            <div class="goal-item">
+              <i class="fa-solid fa-bullseye"></i>
+              <div>
+                <h4>Current focus</h4>
+                <p>Deepening backend system design &amp; building a real test-automation portfolio.</p>
+              </div>
+            </div>
+            <div class="goal-item">
+              <i class="fa-solid fa-compass"></i>
+              <div>
+                <h4>Looking for</h4>
+                <p>SWE / Backend / QA Engineer roles &amp; internships at product companies.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="counters reveal-up">
+            <div class="counter-card">
+              <span class="counter-num" data-count="2">0</span>
+              <span class="counter-label">Projects Shipped</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-num" data-count="20">0</span><span class="counter-plus">+</span>
+              <span class="counter-label">Technologies</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-num" data-count="8" data-decimal="1">0</span>
+              <span class="counter-label">CGPA / 10</span>
+            </div>
+            <div class="counter-card">
+              <span class="counter-num" data-count="2">0</span>
+              <span class="counter-label">Years Learning to Ship</span>
+            </div>
+          </div>
+
+          <!-- Education Timeline -->
+          <div class="edu-timeline reveal-up">
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <span class="edu-year">2024 — Present</span>
+                <h4>B.E. Computer Science &amp; Engineering</h4>
+                <p>SSN College of Engineering, Kancheepuram · CGPA 8.063 · No active backlogs</p>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <span class="edu-year">2022 — 2023</span>
+                <h4>Higher Secondary Certificate (HSC)</h4>
+                <p>Rajavignesh Hr. Sec. School, Melamathur · 96.67%</p>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <span class="edu-year">2020 — 2021</span>
+                <h4>Secondary School Leaving Certificate (SSLC)</h4>
+                <p>Rajavignesh Hr. Sec. School, Melamathur · Half-yearly 98.0%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">// tech-stack.json</p>
+      <h2 class="section-title">Skills &amp; tools</h2>
+      <p class="section-sub">Ranked by comfort, not by buzzword density.</p>
+
+      <div class="skills-tabs" id="skillsTabs">
+        <button class="skills-tab active" data-cat="all">All</button>
+        <button class="skills-tab" data-cat="lang">Languages</button>
+        <button class="skills-tab" data-cat="frontend">Frontend</button>
+        <button class="skills-tab" data-cat="backend">Backend</button>
+        <button class="skills-tab" data-cat="db">Databases</button>
+        <button class="skills-tab" data-cat="testing">Testing</button>
+        <button class="skills-tab" data-cat="devops">DevOps</button>
+        <button class="skills-tab" data-cat="ml">ML</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <p class="eyebrow">// experience.log</p>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="exp-card reveal-up">
+        <div class="exp-card-top">
+          <div class="exp-card-logo"><i class="fa-solid fa-code-branch"></i></div>
+          <div>
+            <h3>Mentor-Guided Full Stack Web Development Intern</h3>
+            <div class="exp-meta">
+              <span class="exp-company">Jyesta</span>
+              <span class="exp-dot">•</span>
+              <span class="exp-date">Dec 2025 — Jan 2026</span>
+            </div>
+          </div>
+          <span class="exp-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
+        </div>
+        <ul class="exp-list">
+          <li>Designed and implemented RESTful APIs using Node.js and Express.js, building MongoDB schemas and CRUD operations for scalable backend services.</li>
+          <li>Implemented secure JWT-based authentication and authorization across frontend and backend, validating endpoints and request/response flows with Postman.</li>
+          <li>Debugged cross-stack integration issues and used Git/GitHub for version control, following modular development practices to keep code maintainable.</li>
+          <li>Built reusable, responsive React.js components, translating functional requirements into modular UI within a structured full-stack workflow.</li>
+        </ul>
+        <div class="exp-tags">
+          <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span><span>React</span><span>Postman</span><span>Git</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">// projects/</p>
+      <h2 class="section-title">Featured projects</h2>
+      <p class="section-sub">Two builds that go end-to-end — from schema to deployment.</p>
+
+      <!-- PROJECT 1 -->
+      <article class="project-card reveal-up" id="proj-agrifleet">
+        <div class="project-media">
+          <div class="project-shot-placeholder">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>AgriFleet — Screenshot</span>
+          </div>
+          <div class="project-shot-dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="project-body">
+          <span class="project-kicker">01 · Full-Stack Platform</span>
+          <h3>AgriFleet</h3>
+          <p class="project-tagline">Role-based fleet management platform with Admin, Driver &amp; Client dashboards.</p>
+
+          <div class="project-chips">
+            <span>React</span><span>Redux Toolkit</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Tailwind CSS</span><span>JWT</span>
+          </div>
+
+          <div class="project-accordion">
+            <details open>
+              <summary>Problem &amp; Architecture</summary>
+              <p>Fleet operators need one system that speaks three different languages: admins managing the whole fleet, drivers accepting jobs, and clients booking vehicles. AgriFleet solves this with a single MERN codebase split into three role-scoped dashboards behind one JWT-authenticated REST API, with MongoDB models for bookings, vehicles, and assignments tying it together.</p>
+            </details>
+            <details>
+              <summary>Challenges &amp; Solutions</summary>
+              <p>The hard part wasn't the CRUD — it was keeping booking state, driver assignment, and dashboard views in sync without stale data. Redux Toolkit centralized that state, while RBAC middleware on the Express side made sure a driver's token could never touch an admin route, even if the frontend route guard was bypassed.</p>
+            </details>
+            <details>
+              <summary>Features</summary>
+              <p>Role-based authentication &amp; RBAC, protected REST endpoints, booking management, driver assignment, a full admin dashboard, client dashboard and driver dashboard, and a responsive UI across desktop and mobile.</p>
+            </details>
+            <details>
+              <summary>Testing &amp; Future Improvements</summary>
+              <p>An independent automation suite (Playwright, Jest, Supertest, Newman, GitHub Actions) covers UI, API, and integration paths. Next up: live GPS tracking for active bookings and a notifications layer for assignment updates.</p>
+            </details>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Akash231005/AgriFleet" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://agrifleetfrontend.vercel.app" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project-card project-card-reverse reveal-up" id="proj-cardekho">
+        <div class="project-media">
+          <div class="project-shot-placeholder">
+            <i class="fa-solid fa-car"></i>
+            <span>CarDekho Predictor — Screenshot</span>
+          </div>
+          <div class="project-shot-dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="project-body">
+          <span class="project-kicker">02 · Machine Learning</span>
+          <h3>CarDekho Used Car Price Prediction</h3>
+          <p class="project-tagline">End-to-end ML pipeline &amp; Flask app predicting used-car prices from 15,000+ listings.</p>
+
+          <div class="project-chips">
+            <span>Python</span><span>Flask</span><span>Scikit-learn</span><span>Random Forest</span><span>NumPy</span><span>Pandas</span><span>Joblib</span>
+          </div>
+
+          <div class="project-metrics">
+            <div class="metric-card">
+              <span class="metric-value" data-count="0.86" data-decimal="2">0</span>
+              <span class="metric-label">R² Score</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">₹1.06L</span>
+              <span class="metric-label">Mean Absolute Error</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value" data-count="15" data-suffix="k+">0</span>
+              <span class="metric-label">Listings Trained On</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value" data-count="6">0</span>
+              <span class="metric-label">Regression Models Compared</span>
+            </div>
+          </div>
+
+          <div class="project-accordion">
+            <details>
+              <summary>Pipeline &amp; Approach</summary>
+              <p>A modular pipeline handles data cleaning, feature engineering, model training and evaluation as separate, reusable stages, run across six regression models before settling on the best performer.</p>
+            </details>
+            <details>
+              <summary>Result</summary>
+              <p>The optimized Random Forest model reached an R² of 0.86 with a mean absolute error of ₹1.06L, with feature-importance analysis pointing to vehicle age and maximum power as the strongest price drivers.</p>
+            </details>
+            <details>
+              <summary>Deployment</summary>
+              <p>The trained model is serialized with Joblib and served through a Flask app deployed on Render, taking listing details as input and returning a real-time price estimate.</p>
+            </details>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Akash231005/Car-Price-Prediction" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://car-price-prediction-nxzu.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <p class="eyebrow">// certifications/</p>
+      <h2 class="section-title">Certifications</h2>
+
+      <div class="cert-timeline">
+        <div class="cert-card reveal-up">
+          <div class="cert-issuer-logo"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="cert-info">
+            <span class="cert-date">Jan 2026</span>
+            <h4>MERN Stack Development</h4>
+            <p>Jyesta</p>
+          </div>
+          <a href="https://lms.jyesta.com/verify-certificate/JC-20260110-1G6IXZ9O" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+            <i class="fa-solid fa-shield-halved"></i> Verify
+          </a>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-issuer-logo"><i class="fa-solid fa-brain"></i></div>
+          <div class="cert-info">
+            <span class="cert-date">2025 — 2026</span>
+            <h4>Artificial Intelligence &amp; Machine Learning</h4>
+            <p>HCL GUVI</p>
+          </div>
+          <a href="#contact" class="btn btn-outline btn-sm">
+            <i class="fa-solid fa-shield-halved"></i> Verify
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS + CODING PROFILES ============ -->
+  <section id="achievements" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">// stats.sh</p>
+      <h2 class="section-title">Achievements &amp; coding profiles</h2>
+
+      <div class="profiles-grid">
+        <a href="https://github.com/Akash231005" target="_blank" rel="noopener" class="profile-card reveal-up">
+          <i class="fa-brands fa-github profile-icon"></i>
+          <h4>GitHub</h4>
+          <p>Akash231005</p>
+          <span class="profile-cta">View profile <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="https://leetcode.com/u/Akash___S/" target="_blank" rel="noopener" class="profile-card reveal-up">
+          <i class="fa-solid fa-code profile-icon"></i>
+          <h4>LeetCode</h4>
+          <p>Akash___S</p>
+          <span class="profile-cta">View profile <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <a href="https://www.linkedin.com/in/akash-s-836200333" target="_blank" rel="noopener" class="profile-card reveal-up">
+          <i class="fa-brands fa-linkedin-in profile-icon"></i>
+          <h4>LinkedIn</h4>
+          <p>akash-s-836200333</p>
+          <span class="profile-cta">View profile <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <div class="achieve-goals reveal-up">
+        <h3><i class="fa-solid fa-flag-checkered"></i> What I'm working toward</h3>
+        <div class="achieve-goals-grid">
+          <div class="achieve-goal"><i class="fa-solid fa-code-pull-request"></i><p>Contributing to my first open-source repository</p></div>
+          <div class="achieve-goal"><i class="fa-solid fa-trophy"></i><p>Competing in a team hackathon</p></div>
+          <div class="achieve-goal"><i class="fa-solid fa-ranking-star"></i><p>Consistent DSA practice — building toward a 100+ solved streak</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <p class="eyebrow">// contact.send()</p>
+      <h2 class="section-title">Let's build something</h2>
+      <p class="section-sub">Have a role, a project, or just want to talk backend architecture? My inbox is open.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <a href="mailto:akashs231005@gmail.com" class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div><span>Email</span><p>akashs231005@gmail.com</p></div>
+          </a>
+          <a href="tel:+918925655820" class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><span>Phone</span><p>+91 89256 55820</p></div>
+          </a>
+          <a href="https://www.linkedin.com/in/akash-s-836200333" target="_blank" rel="noopener" class="contact-item">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <div><span>LinkedIn</span><p>akash-s-836200333</p></div>
+          </a>
+          <a href="https://github.com/Akash231005" target="_blank" rel="noopener" class="contact-item">
+            <i class="fa-brands fa-github"></i>
+            <div><span>GitHub</span><p>Akash231005</p></div>
+          </a>
+          <div class="contact-item contact-item-static">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><span>Location</span><p>Chennai, Tamil Nadu, India</p></div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-up" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Role, project, or just say hi" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about what you have in mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">AS<span class="dot">.</span></a>
+      <p>Full-stack engineer building tested, production-ready systems.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://github.com/Akash231005" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/akash-s-836200333" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://leetcode.com/u/Akash___S/" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i></a>
+      <a href="mailto:akashs231005@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Akash S. Built from scratch, deployed on Vercel.</p>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
