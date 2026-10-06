@@ -45,7 +45,6 @@
       <a href="#home" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#skills" class="nav-link">Skills</a>
-      <a href="#experience" class="nav-link">Experience</a>
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#certifications" class="nav-link">Certs</a>
       <a href="#achievements" class="nav-link">Achievements</a>
@@ -123,8 +122,11 @@
       <div class="about-grid">
         <div class="about-visual reveal-up">
           <div class="about-photo-frame">
-              <img src="assets/DP_Photo.jpeg" alt="Akash S" class="about-photo-img">
-              <div class="about-photo-badge">
+            <div class="about-photo-placeholder">
+              <i class="fa-solid fa-user"></i>
+              <span>Photo</span>
+            </div>
+            <div class="about-photo-badge">
               <i class="fa-solid fa-location-dot"></i> Chennai, India
             </div>
           </div>
@@ -165,7 +167,7 @@
 
           <div class="counters reveal-up">
             <div class="counter-card">
-              <span class="counter-num" data-count="2">0</span>
+              <span class="counter-num" data-count="5">0</span>
               <span class="counter-label">Projects Shipped</span>
             </div>
             <div class="counter-card">
@@ -238,48 +240,17 @@
     </div>
   </section>
 
-  <!-- ============ EXPERIENCE ============ -->
-  <section id="experience" class="section">
-    <div class="container">
-      <p class="eyebrow">// experience.log</p>
-      <h2 class="section-title">Experience</h2>
-
-      <div class="exp-card reveal-up">
-        <div class="exp-card-top">
-          <div class="exp-card-logo"><i class="fa-solid fa-code-branch"></i></div>
-          <div>
-            <h3>Mentor-Guided Full Stack Web Development Intern</h3>
-            <div class="exp-meta">
-              <span class="exp-company">Jyesta</span>
-              <span class="exp-dot">•</span>
-              <span class="exp-date">Dec 2025 — Jan 2026</span>
-            </div>
-          </div>
-          <span class="exp-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-        </div>
-        <ul class="exp-list">
-          <li>Designed and implemented RESTful APIs using Node.js and Express.js, building MongoDB schemas and CRUD operations for scalable backend services.</li>
-          <li>Implemented secure JWT-based authentication and authorization across frontend and backend, validating endpoints and request/response flows with Postman.</li>
-          <li>Debugged cross-stack integration issues and used Git/GitHub for version control, following modular development practices to keep code maintainable.</li>
-          <li>Built reusable, responsive React.js components, translating functional requirements into modular UI within a structured full-stack workflow.</li>
-        </ul>
-        <div class="exp-tags">
-          <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span><span>React</span><span>Postman</span><span>Git</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ PROJECTS ============ -->
   <section id="projects" class="section section-alt">
     <div class="container">
       <p class="eyebrow">// projects/</p>
       <h2 class="section-title">Featured projects</h2>
-      <p class="section-sub">Two builds that go end-to-end — from schema to deployment.</p>
+      <p class="section-sub">Builds that go end-to-end — from schema to deployment, and from dataset to trained model.</p>
 
       <!-- PROJECT 1 -->
       <article class="project-card reveal-up" id="proj-agrifleet">
         <div class="project-media">
+          <!-- Replace with: <img src="assets/projects/agrifleet.jpg" alt="AgriFleet dashboard screenshot"> -->
           <div class="project-shot-placeholder">
             <i class="fa-solid fa-truck-fast"></i>
             <span>AgriFleet — Screenshot</span>
@@ -324,6 +295,7 @@
       <!-- PROJECT 2 -->
       <article class="project-card project-card-reverse reveal-up" id="proj-cardekho">
         <div class="project-media">
+          <!-- Replace with: <img src="assets/projects/cardekho.jpg" alt="CarDekho price prediction app screenshot"> -->
           <div class="project-shot-placeholder">
             <i class="fa-solid fa-car"></i>
             <span>CarDekho Predictor — Screenshot</span>
@@ -376,6 +348,135 @@
           <div class="project-links">
             <a href="https://github.com/Akash231005/Car-Price-Prediction" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
             <a href="https://car-price-prediction-nxzu.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project-card reveal-up" id="proj-placement-tracker">
+        <div class="project-media">
+          <!-- Replace with: <img src="assets/projects/placement-tracker.jpg" alt="Placement Progress Tracker dashboard screenshot"> -->
+          <div class="project-shot-placeholder">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Placement Progress Tracker — Screenshot</span>
+          </div>
+          <div class="project-shot-dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="project-body">
+          <span class="project-kicker">03 · Full-Stack Platform</span>
+          <h3>Placement Progress Tracker</h3>
+          <p class="project-tagline">A MERN platform that tracks DSA, aptitude, typing and interview prep with analytics-driven dashboards.</p>
+
+          <div class="project-chips">
+            <span>React</span><span>Vite</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span><span>Playwright</span>
+          </div>
+
+          <div class="project-accordion">
+            <details open>
+              <summary>Problem &amp; Architecture</summary>
+              <p>Placement prep spans too many disconnected habits — DSA reps, aptitude accuracy, typing speed, mock interviews, applications — to track in a notes app. This platform centralizes all of it behind one React (Vite) frontend and an Express 5 API with async routers, backed by MongoDB Atlas, so daily and weekly milestones roll up into a single progress view.</p>
+            </details>
+            <details>
+              <summary>Features</summary>
+              <p>Weekly and daily milestone tracking across DSA practice, core CSE revision, aptitude accuracy, communication workflows, typing mechanics (WPM), and project sprints, surfaced through analytics-driven progress dashboards.</p>
+            </details>
+            <details>
+              <summary>Security &amp; Testing</summary>
+              <p>REST APIs are secured with JWT authentication and bcrypt password hashing. Backend unit and integration tests run on Jest, Supertest and MongoDB-Memory-Server against isolated schemas, while a Playwright end-to-end suite (<code>frontend/e2e/auth.spec.js</code>) exercises the real auth flow in the browser.</p>
+            </details>
+            <details>
+              <summary>CI/CD &amp; Deployment</summary>
+              <p>A GitHub Actions workflow enforces strict <code>npm ci</code> installs, runs the backend Jest suite, and validates the frontend Vite build on every push. The API deploys to Render and the UI to Vercel.</p>
+            </details>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Akash231005/placement-progress-tracker" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://placement-progress-tracker-two.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 4 -->
+      <article class="project-card project-card-reverse reveal-up" id="proj-tesla-autopilot">
+        <div class="project-media">
+          <!-- Replace with: <img src="assets/projects/tesla-autopilot.jpg" alt="Tesla Autopilot Clone detection output screenshot"> -->
+          <div class="project-shot-placeholder">
+            <i class="fa-solid fa-car-side"></i>
+            <span>Tesla Autopilot Clone — Screenshot</span>
+          </div>
+          <div class="project-shot-dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="project-body">
+          <span class="project-kicker">04 · Computer Vision</span>
+          <h3>Tesla Autopilot Clone — Road Object Detection</h3>
+          <p class="project-tagline">A YOLOv8 perception pipeline on the KITTI dataset, detecting cars, pedestrians, cyclists and more.</p>
+
+          <div class="project-chips">
+            <span>Python</span><span>YOLOv8</span><span>PyTorch</span><span>OpenCV</span><span>KITTI</span>
+          </div>
+
+          <div class="project-accordion">
+            <details open>
+              <summary>Goal &amp; Approach</summary>
+              <p>Autonomous-driving perception starts with reliably spotting what's on the road. This pipeline fine-tunes YOLOv8 on the KITTI benchmark to detect cars, vans, trucks, trams, pedestrians, cyclists and other road users from front-camera images — a building block for driver-assistance systems.</p>
+            </details>
+            <details>
+              <summary>Data Pipeline</summary>
+              <p>KITTI's native label format is automatically converted to YOLO-style bounding boxes, with box clipping and validation to drop degenerate boxes, then split into a reproducible, seeded 80/10/10 train/val/test set.</p>
+            </details>
+            <details>
+              <summary>Training &amp; Evaluation</summary>
+              <p>Starts from a YOLOv8n baseline (fast to train on a free Kaggle GPU) and fine-tunes via transfer learning. Evaluation reports Precision, Recall, mAP@0.5 and mAP@0.5:0.95 on both validation and test splits, plus an IoU-matched confusion matrix to see exactly which classes get confused with which.</p>
+            </details>
+            <details>
+              <summary>Outputs</summary>
+              <p>Final weights, the class mapping, metrics (JSON/CSV) and training curves are saved as reusable artefacts, alongside a standalone <code>predict_image()</code> function for running inference on a new image.</p>
+            </details>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Akash231005/Tesla-Object-Detection" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 5 -->
+      <article class="project-card reveal-up" id="proj-face-recognition">
+        <div class="project-media">
+          <!-- Replace with: <img src="assets/projects/face-recognition.jpg" alt="Face recognition system screenshot"> -->
+          <div class="project-shot-placeholder">
+            <i class="fa-solid fa-face-viewfinder"></i>
+            <span>Face Recognition — Screenshot</span>
+          </div>
+          <div class="project-shot-dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="project-body">
+          <span class="project-kicker">05 · Computer Vision</span>
+          <h3>Face Recognition System using Deep Face Embeddings</h3>
+          <p class="project-tagline">An LFW-based pipeline turning faces into deep embeddings, then classifying identities with an SVM.</p>
+
+          <div class="project-chips">
+            <span>Python</span><span>TensorFlow</span><span>MTCNN</span><span>EfficientNet-Lite</span><span>SVM</span>
+          </div>
+
+          <div class="project-accordion">
+            <details open>
+              <summary>Pipeline</summary>
+              <p>Faces are first located in each image with MTCNN, then passed through EfficientNet-Lite to extract deep facial-feature embeddings — a compact numerical fingerprint of each face rather than the raw pixels.</p>
+            </details>
+            <details>
+              <summary>Classification</summary>
+              <p>A Linear SVM is trained on top of those embeddings to classify identities, built on the Labeled Faces in the Wild (LFW) dataset filtered down to people with enough sample images per class.</p>
+            </details>
+            <details>
+              <summary>Evaluation &amp; Persistence</summary>
+              <p>The trained pipeline — detector, embedder and classifier — is persisted to a single model file for reuse, with evaluation reported via accuracy, a full classification report, and a confusion matrix to see where identities get mixed up.</p>
+            </details>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Akash231005/facial-recognition-lfw" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> Code</a>
           </div>
         </div>
       </article>

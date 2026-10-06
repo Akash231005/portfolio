@@ -329,20 +329,35 @@ document.getElementById('year').textContent = new Date().getFullYear();
 (function contactForm(){
   const form = document.getElementById('contactForm');
   const note = document.getElementById('formNote');
+  const DEST_EMAIL = 'akashs231005@gmail.com';
   if(!form) return;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Opening mail app...';
     btn.disabled = true;
 
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim() || 'Portfolio enquiry';
+    const message = form.message.value.trim();
+
+    const body =
+`${message}
+
+—
+From: ${name}
+Reply to: ${email}`;
+
+    const mailtoUrl = `mailto:${DEST_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     setTimeout(() => {
-      const name = form.name.value.trim();
-      note.textContent = `Thanks${name ? ', ' + name : ''} — this demo form isn't wired to a mail service yet. Please reach out directly at akashs231005@gmail.com.`;
+      window.location.href = mailtoUrl;
+      note.textContent = `Thanks${name ? ', ' + name : ''} — your mail app should open with this message ready to send. If it didn't, email me directly at ${DEST_EMAIL}.`;
       btn.innerHTML = original;
       btn.disabled = false;
       form.reset();
-    }, 900);
+    }, 500);
   });
 })();

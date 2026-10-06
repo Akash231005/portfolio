@@ -265,13 +265,6 @@ body::before{
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
   color: var(--text-low); font-size: 13px;
 }
-.about-photo-img{
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: calc(var(--radius-lg) - 3px);
-  display: block;
-}
 .about-photo-placeholder i{ font-size: 46px; opacity:.5; }
 .about-photo-badge{
   position:absolute; bottom: -16px; left: 50%; transform: translateX(-50%);
