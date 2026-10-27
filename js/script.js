@@ -97,11 +97,9 @@ document.getElementById('year').textContent = new Date().getFullYear();
   const el = document.getElementById('typedText');
   if(!el) return;
   const phrases = [
-    'full-stack products.',
-    'secure REST APIs.',
-    'tested backend systems.',
-    'JWT-authenticated apps.',
-    'ML-powered tools.'
+    'Full-Stack Software Developer',
+    'AI/ML Engineer',
+    'Computer Science Undergraduate'
   ];
   let pIndex = 0, cIndex = 0, deleting = false;
 
@@ -241,40 +239,58 @@ document.getElementById('year').textContent = new Date().getFullYear();
    ============================================ */
 (function skills(){
   const data = [
-    { name:'JavaScript', icon:'fa-brands fa-square-js', level:'Advanced', pct:88, cat:'lang' },
-    { name:'Python', icon:'fa-brands fa-python', level:'Advanced', pct:85, cat:'lang' },
-    { name:'Java', icon:'fa-solid fa-mug-hot', level:'Intermediate', pct:75, cat:'lang' },
-    { name:'C', icon:'fa-solid fa-c', level:'Intermediate', pct:72, cat:'lang' },
+    // Programming Languages
+    { name:'Java', icon:'fa-brands fa-java', level:'Core', pct:84, cat:'lang' },
+    { name:'Python', icon:'fa-brands fa-python', level:'Core', pct:88, cat:'lang' },
+    { name:'JavaScript', icon:'fa-brands fa-square-js', level:'Core', pct:86, cat:'lang' },
+    { name:'C', icon:'fa-solid fa-code', level:'Proficient', pct:76, cat:'lang' },
 
-    { name:'React', icon:'fa-brands fa-react', level:'Advanced', pct:87, cat:'frontend' },
-    { name:'Redux Toolkit', icon:'fa-solid fa-diagram-project', level:'Advanced', pct:82, cat:'frontend' },
-    { name:'Tailwind CSS', icon:'fa-brands fa-css3-alt', level:'Advanced', pct:85, cat:'frontend' },
-    { name:'HTML / CSS', icon:'fa-brands fa-html5', level:'Advanced', pct:90, cat:'frontend' },
-    { name:'Bootstrap', icon:'fa-brands fa-bootstrap', level:'Intermediate', pct:75, cat:'frontend' },
+    // Full-Stack Development
+    { name:'React', icon:'fa-brands fa-react', level:'Core', pct:88, cat:'fullstack' },
+    { name:'Node.js', icon:'fa-brands fa-node-js', level:'Core', pct:85, cat:'fullstack' },
+    { name:'Express.js', icon:'fa-solid fa-server', level:'Core', pct:85, cat:'fullstack' },
+    { name:'Spring Boot', icon:'fa-solid fa-leaf', level:'Proficient', pct:74, cat:'fullstack' },
+    { name:'Flask', icon:'fa-solid fa-fire', level:'Proficient', pct:78, cat:'fullstack' },
+    { name:'HTML5', icon:'fa-brands fa-html5', level:'Core', pct:90, cat:'fullstack' },
+    { name:'CSS3', icon:'fa-brands fa-css3-alt', level:'Core', pct:88, cat:'fullstack' },
+    { name:'REST APIs', icon:'fa-solid fa-network-wired', level:'Core', pct:88, cat:'fullstack' },
 
-    { name:'Node.js', icon:'fa-brands fa-node-js', level:'Advanced', pct:86, cat:'backend' },
-    { name:'Express.js', icon:'fa-solid fa-server', level:'Advanced', pct:85, cat:'backend' },
-    { name:'REST APIs', icon:'fa-solid fa-network-wired', level:'Advanced', pct:88, cat:'backend' },
-    { name:'JWT Auth', icon:'fa-solid fa-key', level:'Advanced', pct:84, cat:'backend' },
-    { name:'Spring Boot', icon:'fa-solid fa-leaf', level:'Intermediate', pct:65, cat:'backend' },
+    // AI and Machine Learning
+    { name:'Scikit-learn', icon:'fa-solid fa-brain', level:'Core', pct:84, cat:'ml' },
+    { name:'TensorFlow', icon:'fa-solid fa-cube', level:'Proficient', pct:80, cat:'ml' },
+    { name:'Keras', icon:'fa-solid fa-layer-group', level:'Proficient', pct:78, cat:'ml' },
+    { name:'YOLOv8', icon:'fa-solid fa-eye', level:'Proficient', pct:82, cat:'ml' },
+    { name:'OpenCV', icon:'fa-solid fa-camera', level:'Proficient', pct:80, cat:'ml' },
+    { name:'NumPy', icon:'fa-solid fa-chart-line', level:'Core', pct:85, cat:'ml' },
+    { name:'Pandas', icon:'fa-solid fa-table-cells', level:'Core', pct:85, cat:'ml' },
 
-    { name:'MongoDB', icon:'fa-solid fa-leaf', level:'Advanced', pct:85, cat:'db' },
-    { name:'MySQL', icon:'fa-solid fa-database', level:'Intermediate', pct:78, cat:'db' },
-    { name:'Oracle SQL', icon:'fa-solid fa-database', level:'Intermediate', pct:72, cat:'db' },
+    // Databases
+    { name:'MongoDB', icon:'fa-solid fa-database', level:'Core', pct:85, cat:'db' },
+    { name:'MySQL', icon:'fa-solid fa-database', level:'Proficient', pct:82, cat:'db' },
+    { name:'Oracle SQL', icon:'fa-solid fa-database', level:'Proficient', pct:78, cat:'db' },
+    { name:'SQLite', icon:'fa-solid fa-database', level:'Proficient', pct:76, cat:'db' },
 
-    { name:'Playwright', icon:'fa-solid fa-vial', level:'Intermediate', pct:78, cat:'testing' },
-    { name:'Jest', icon:'fa-solid fa-vial-circle-check', level:'Intermediate', pct:76, cat:'testing' },
-    { name:'Supertest', icon:'fa-solid fa-flask', level:'Intermediate', pct:74, cat:'testing' },
-    { name:'Postman / Newman', icon:'fa-solid fa-paper-plane', level:'Advanced', pct:82, cat:'testing' },
+    // Testing and Quality Engineering
+    { name:'Playwright', icon:'fa-solid fa-vial', level:'Proficient', pct:80, cat:'testing' },
+    { name:'Jest', icon:'fa-solid fa-vial-circle-check', level:'Proficient', pct:78, cat:'testing' },
+    { name:'Supertest', icon:'fa-solid fa-flask', level:'Proficient', pct:76, cat:'testing' },
+    { name:'Newman', icon:'fa-solid fa-box-archive', level:'Proficient', pct:75, cat:'testing' },
+    { name:'Postman', icon:'fa-solid fa-paper-plane', level:'Core', pct:85, cat:'testing' },
 
-    { name:'Docker', icon:'fa-brands fa-docker', level:'Intermediate', pct:68, cat:'devops' },
-    { name:'GitHub Actions', icon:'fa-brands fa-github', level:'Intermediate', pct:73, cat:'devops' },
-    { name:'Vercel / Render', icon:'fa-solid fa-cloud-arrow-up', level:'Advanced', pct:83, cat:'devops' },
-    { name:'Git & GitHub', icon:'fa-brands fa-git-alt', level:'Advanced', pct:88, cat:'devops' },
+    // DevOps and Deployment
+    { name:'Docker', icon:'fa-brands fa-docker', level:'Proficient', pct:72, cat:'devops' },
+    { name:'Git', icon:'fa-brands fa-git-alt', level:'Core', pct:88, cat:'devops' },
+    { name:'GitHub Actions', icon:'fa-brands fa-github', level:'Proficient', pct:78, cat:'devops' },
+    { name:'Vercel', icon:'fa-solid fa-cloud-arrow-up', level:'Core', pct:85, cat:'devops' },
+    { name:'Render', icon:'fa-solid fa-server', level:'Core', pct:82, cat:'devops' },
+    { name:'CI/CD', icon:'fa-solid fa-arrows-spin', level:'Proficient', pct:78, cat:'devops' },
 
-    { name:'Scikit-learn', icon:'fa-solid fa-brain', level:'Intermediate', pct:76, cat:'ml' },
-    { name:'Pandas / NumPy', icon:'fa-solid fa-table-cells', level:'Intermediate', pct:78, cat:'ml' },
-    { name:'Flask', icon:'fa-solid fa-fire', level:'Intermediate', pct:74, cat:'ml' },
+    // Computer Science Fundamentals
+    { name:'Data Structures & Algorithms', icon:'fa-solid fa-diagram-project', level:'Core', pct:86, cat:'cs' },
+    { name:'Object-Oriented Programming', icon:'fa-solid fa-cubes', level:'Core', pct:88, cat:'cs' },
+    { name:'DBMS', icon:'fa-solid fa-database', level:'Core', pct:85, cat:'cs' },
+    { name:'Operating Systems', icon:'fa-solid fa-microchip', level:'Core', pct:82, cat:'cs' },
+    { name:'Computer Networks', icon:'fa-solid fa-network-wired', level:'Core', pct:80, cat:'cs' },
   ];
 
   const grid = document.getElementById('skillsGrid');
@@ -361,3 +377,76 @@ Reply to: ${email}`;
     }, 500);
   });
 })();
+
+/* ============================================
+   PROJECT IMAGE LIGHTBOX MODAL
+   ============================================ */
+(function lightbox(){
+  const modal = document.getElementById('imageLightbox');
+  if(!modal) return;
+  const imgEl = document.getElementById('lightboxImage') || document.getElementById('lightboxImg');
+  const titleEl = document.getElementById('lightboxTitle');
+  const rawLinkEl = document.getElementById('lightboxRawLink');
+  const closeBtn = document.getElementById('lightboxClose');
+  const backdrop = document.getElementById('lightboxBackdrop');
+
+  function openLightbox(src, title, fallback){
+    if(!src) return;
+    imgEl.src = src;
+    imgEl.onerror = () => {
+      if(fallback && imgEl.src !== fallback){
+        imgEl.src = fallback;
+      }
+    };
+    if(titleEl) titleEl.textContent = title || 'Project Showcase';
+    if(rawLinkEl) rawLinkEl.href = src;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      if(imgEl) imgEl.src = '';
+    }, 250);
+  }
+
+  document.querySelectorAll('.view-full-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const src = btn.dataset.fullImg || btn.getAttribute('href');
+      const title = btn.dataset.title || 'Project Showcase';
+      const fallback = btn.dataset.fallbackImg;
+      openLightbox(src, title, fallback);
+    });
+  });
+
+  // Clicking directly on project image preview opens lightbox
+  document.querySelectorAll('.project-media .project-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const parent = img.closest('.project-media');
+      const viewBtn = parent ? parent.querySelector('.view-full-btn') : null;
+      const src = viewBtn ? (viewBtn.dataset.fullImg || viewBtn.getAttribute('href')) : img.src;
+      const title = viewBtn ? (viewBtn.dataset.title || 'Project Showcase') : img.alt;
+      const fallback = viewBtn ? viewBtn.dataset.fallbackImg : null;
+      openLightbox(src, title, fallback);
+    });
+  });
+
+  if(closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if(backdrop) backdrop.addEventListener('click', closeLightbox);
+
+  window.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && modal.classList.contains('active')){
+      closeLightbox();
+    }
+  });
+})();
+
